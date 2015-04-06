@@ -17,6 +17,7 @@ gulp.task('babel', function () {
     .pipe(babel({
       stage: 0  // http://babeljs.io/docs/usage/experimental/
     }))
+    .on('error', console.error.bind(console))
     //.pipe(concat('all.js'))
     //.pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'));
